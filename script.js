@@ -171,9 +171,12 @@ function animateExperienceCards() {
     const experienceCards = document.querySelectorAll('.experience-card');
     
     experienceCards.forEach((card, index) => {
+        // Start with animate-out class
+        card.classList.add('animate-out');
+        
         setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0) scale(1)';
+            card.classList.remove('animate-out');
+            card.classList.add('animate-in');
         }, index * 300);
     });
 }
