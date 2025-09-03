@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Theme</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --text-primary: #1e293b;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #0f172a;
+            --text-primary: #f1f5f9;
+            --bg-card: #334155;
+            --border-color: #475569;
+        }
+        
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 2rem;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1001;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            border-color: #3b82f6;
+        }
+        
+        .theme-toggle i {
+            font-size: 1.2rem;
+            color: #f59e0b;
+        }
+        
+        .theme-toggle .fa-sun {
+            color: #fbbf24 !important;
+        }
+        
+        .debug-info {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .status {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            border-radius: 5px;
+        }
+        
+        .console-log {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-top: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <div class="debug-info">
+        <h1>Debug Theme Toggle</h1>
+        <p>This page tests the theme toggle functionality.</p>
+        
+        <div class="status">
+            <h3>Current Theme: <span id="current-theme">light</span></h3>
+            <p>Click the button in the top-right corner to toggle themes.</p>
+            <p>Check the console for debug information.</p>
+        </div>
+        
+        <div class="console-log" id="console-log">
+            <div>Console logs will appear here...</div>
+        </div>
+    </div>
+
+    <script>
+        // Debug logging function
+        function log(message) {
+            console.log(message);
+            const logElement = document.getElementById('console-log');
+            const logEntry = document.createElement('div');
+            logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logElement.appendChild(logEntry);
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+        
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        
+        function setTheme(theme) {
+            log(`Setting theme to: ${theme}`);
+            currentTheme = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                const icon = themeToggle.querySelector('i');
+                if (icon) {
+                    if (theme === 'dark') {
+                        icon.className = 'fas fa-sun';
+                        log('Icon changed to sun');
+                    } else {
+                        icon.className = 'fas fa-moon';
+                        log('Icon changed to moon');
+                    }
+                } else {
+                    log('ERROR: Icon element not found');
+                }
+            } else {
+                log('ERROR: Theme toggle button not found');
+            }
+            
+            const statusElement = document.getElementById('current-theme');
+            if (statusElement) {
+                statusElement.textContent = theme;
+            }
+            
+            log(`Theme successfully set to: ${theme}`);
+        }
+        
+        function toggleTheme() {
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            log(`Toggling theme from ${currentTheme} to ${newTheme}`);
+            setTheme(newTheme);
+        }
+        
+        function initTheme() {
+            log(`Initializing theme with: ${currentTheme}`);
+            setTheme(currentTheme);
+            
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+                log('Theme toggle event listener added successfully');
+            } else {
+                log('ERROR: Theme toggle button not found during initialization');
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            log('DOM loaded, initializing theme...');
+            initTheme();
+        });
+    </script>
+</body>
+</html>
