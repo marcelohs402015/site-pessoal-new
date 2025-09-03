@@ -976,14 +976,56 @@ section {
         width: 100%;
         left: 0 !important;
         padding-left: 50px;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+        margin-left: 0;
     }
     
     .timeline-content::before {
         left: -35px !important;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .timeline-title {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+    
+    .timeline-company {
+        font-size: 1rem;
+    }
+    
+    .timeline-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        margin-bottom: 1rem;
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
     }
     
     .contact-content {
@@ -1026,6 +1068,28 @@ section {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
     }
 }
 
@@ -1074,6 +1138,33 @@ section {
         justify-content: center;
     }
     
+    .timeline-item {
+        padding-left: 40px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .timeline-content {
+        padding: 1.2rem;
+    }
+    
+    .timeline-content::before {
+        left: -30px !important;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-company {
+        font-size: 0.95rem;
+    }
+    
+    .timeline-description {
+        font-size: 0.85rem;
+    }
+    
     .about-stats {
         gap: 1rem;
     }
@@ -1097,6 +1188,45 @@ section {
     .project-btn {
         width: 100%;
         justify-content: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-category {
+        padding: 1.5rem;
+    }
+    
+    .skill-category h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-item {
+        margin-bottom: 0.8rem;
+    }
+    
+    .skill-name {
+        font-size: 0.9rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1.2rem;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
     }
     
     .social-link {
