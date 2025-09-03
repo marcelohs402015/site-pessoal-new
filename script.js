@@ -110,23 +110,20 @@ const translations = {
         'btn-code-5': 'Code',
         
         // Skills Section
-        'skills-title': 'Technical Skills',
-        'skill-lang': 'Programming Languages',
-        'skill-frameworks': 'Frameworks & Technologies',
-        'skill-cloud': 'Cloud & DevOps',
-        'skill-tools': 'Tools & Methodologies',
+        'skills-title': 'Skills & Technologies',
+        'backend-title': 'Backend Development',
+        'frontend-title': 'Frontend Development',
+        'database-title': 'Database & Cloud',
+        'devops-title': 'DevOps & Tools',
         
         // Contact Section
-        'contact-title': 'Get in Touch',
-        'contact-subtitle': 'Let\'s Talk!',
-        'contact-text': 'I\'m always open to new opportunities and interesting collaborations. If you have a project in mind or would like to discuss possibilities, don\'t hesitate to get in touch.',
-        'contact-social': 'Social Media',
+        'contact-title': 'Get In Touch',
+        'contact-info-title': 'Contact Information',
         'contact-cv-title': 'Download CV',
-        'contact-cv-text': 'Get my professional resume in PDF format',
-        'cv-download-text': 'Download CV (PDF)',
+        'contact-cv-text': 'Download my complete CV in PDF format',
+        'cv-download-text': 'Download CV',
         
         // Footer
-        'footer-rights': 'All rights reserved.',
         'footer-developed': 'Developed with',
         'footer-code': 'and lots of code'
     },
@@ -141,16 +138,16 @@ const translations = {
         
         // Hero Section
         'hero-greeting': 'Olá, eu sou',
-        'hero-subtitle': 'Desenvolvedor Java Senior & Especialista em IA',
-        'hero-description': 'Profissional com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com diversas tecnologias usando metodologias ágeis. Atualmente especializando-se em Model Context Protocol (MCP) e integração de IA generativa, desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia.',
+        'hero-subtitle': 'Desenvolvedor Java Sênior & Especialista em IA',
+        'hero-description': 'Profissional com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com várias tecnologias usando metodologias ágeis. Atualmente especializando-me em Model Context Protocol (MCP) e integração de IA generativa, desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia.',
         'btn-projects': 'Ver Projetos',
         'btn-contact': 'Contato',
         
         // About Section
         'about-title': 'Sobre Mim',
-        'about-text-1': 'Sou um desenvolvedor Java Senior apaixonado por tecnologia, com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com diversas tecnologias usando metodologias ágeis. Minha jornada na área de TI me permitiu trabalhar com as mais modernas tecnologias e arquiteturas.',
-        'about-text-2': 'Atualmente na Foursys, estou envolvido na migração de serviços do Google Cloud Platform para Equifax Cloud, bem como na atualização de microserviços escritos em Java 17 para Java 21 e no desenvolvimento de novos microserviços de criptografia usando a biblioteca Barricade do Java para criptografia de dados. Também lidero equipes de desenvolvimento, contribuindo para o sucesso dos projetos e o crescimento profissional dos meus colegas.',
-        'about-text-3': 'Atualmente estou me especializando em Model Context Protocol (MCP) e integração de IA generativa. Estou desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia automatizando tarefas repetitivas. Meu objetivo é fornecer soluções de qualidade, seguras e de alto desempenho para os clientes, usando as melhores práticas e meu conhecimento em gestão de tecnologia da informação.',
+        'about-text-1': 'Sou um Desenvolvedor Java Sênior apaixonado com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com várias tecnologias usando metodologias ágeis. Minha jornada na TI me permitiu trabalhar com as tecnologias e arquiteturas mais modernas.',
+        'about-text-2': 'Atualmente na Foursys, estou envolvido na migração de serviços do Google Cloud Platform para a Equifax Cloud, bem como na atualização de microserviços escritos em Java 17 para Java 21 e no desenvolvimento de novos microserviços de criptografia usando a biblioteca Barricade do Java para criptografia de dados. Também lidero equipes de desenvolvimento, contribuindo para o sucesso dos projetos e o crescimento profissional dos meus colegas.',
+        'about-text-3': 'Atualmente estou me especializando em Model Context Protocol (MCP) e integração de IA generativa. Estou desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia automatizando tarefas repetitivas. Meu objetivo é fornecer soluções de qualidade, seguras e de alto desempenho para clientes, usando as melhores práticas e meu conhecimento em gestão de tecnologia da informação.',
         'stat-experience': 'Anos de Experiência',
         'stat-ai': 'MCP & IA Generativa',
         'stat-repos': 'Repositórios GitHub',
@@ -158,27 +155,27 @@ const translations = {
         
         // Experience Section
         'experience-title': 'Experiência Profissional',
-        'exp-1-title': 'Desenvolvedor Java Senior & Líder de Equipe',
+        'exp-1-title': 'Desenvolvedor Java Sênior & Líder de Equipe',
         'exp-1-company': 'Foursys',
         'exp-1-period': '2023 - Presente',
-        'exp-1-desc': 'Liderando equipes de desenvolvimento, migrando serviços do GCP para Equifax Cloud, atualizando microserviços de Java 17 para Java 21, desenvolvendo microserviços de criptografia com biblioteca Barricade do Java, e especializando-se em MCP e integração de IA generativa.',
+        'exp-1-desc': 'Liderando equipes de desenvolvimento, migrando serviços do GCP para Equifax Cloud, atualizando microserviços do Java 17 para Java 21, desenvolvendo microserviços de criptografia com biblioteca Barricade do Java, e especializando-me em MCP e integração de IA generativa.',
         'exp-2-title': 'Desenvolvedor Java Pleno/Sênior',
         'exp-2-company': 'Empresas de Tecnologia',
         'exp-2-period': '2010 - 2020',
-        'exp-2-desc': 'Desenvolvimento de aplicações Java EE, sistemas de gestão empresarial, integração com bancos de dados e APIs de terceiros.',
+        'exp-2-desc': 'Desenvolvimento de aplicações Java EE, sistemas de gestão empresarial, integração de banco de dados e APIs de terceiros.',
         'exp-3-title': 'Desenvolvedor Java Júnior/Pleno',
         'exp-3-company': 'Startups e Empresas de TI',
         'exp-3-period': '1995 - 2010',
-        'exp-3-desc': 'Início da carreira em desenvolvimento Java, aprendizado de frameworks e metodologias de desenvolvimento de software.',
+        'exp-3-desc': 'Início da carreira de desenvolvimento Java, aprendendo frameworks e metodologias de desenvolvimento de software.',
         
         // Projects Section
         'projects-title': 'Projetos em Destaque',
         'project-handyman-desc': 'Sistema completo de gestão para prestadores de serviços, com frontend React e backend Java.',
-        'project-concierge-desc': 'Sistema de controle de acesso e gestão de portaria para condomínios residenciais.',
+        'project-concierge-desc': 'Sistema de controle de acesso e gestão de portaria para edifícios residenciais.',
         'project-parking-desc': 'API RESTful para sistema de estacionamento com JPA e Spring Boot.',
-        'project-security-desc': 'Sistema de segurança e controle de acesso para condomínios com interface web.',
-        'project-spring-desc': 'API moderna com Spring Boot 3, JPA e as últimas funcionalidades do framework.',
-        'project-quarkus-desc': 'API de alta performance desenvolvida com Quarkus para aplicações nativas em cloud.',
+        'project-security-desc': 'Sistema de segurança e controle de acesso para edifícios com interface web.',
+        'project-spring-desc': 'API moderna com Spring Boot 3, JPA e os recursos mais recentes do framework.',
+        'project-quarkus-desc': 'API de alto desempenho desenvolvida com Quarkus para aplicações cloud-native.',
         'btn-demo': 'Demo',
         'btn-code-1': 'Código',
         'btn-code-2': 'Código',
@@ -187,23 +184,20 @@ const translations = {
         'btn-code-5': 'Código',
         
         // Skills Section
-        'skills-title': 'Habilidades Técnicas',
-        'skill-lang': 'Linguagens de Programação',
-        'skill-frameworks': 'Frameworks & Tecnologias',
-        'skill-cloud': 'Cloud & DevOps',
-        'skill-tools': 'Ferramentas & Metodologias',
+        'skills-title': 'Habilidades & Tecnologias',
+        'backend-title': 'Desenvolvimento Backend',
+        'frontend-title': 'Desenvolvimento Frontend',
+        'database-title': 'Banco de Dados & Cloud',
+        'devops-title': 'DevOps & Ferramentas',
         
         // Contact Section
         'contact-title': 'Entre em Contato',
-        'contact-subtitle': 'Vamos Conversar!',
-        'contact-text': 'Estou sempre aberto a novas oportunidades e colaborações interessantes. Se você tem um projeto em mente ou gostaria de discutir possibilidades, não hesite em entrar em contato.',
-        'contact-social': 'Redes Sociais',
+        'contact-info-title': 'Informações de Contato',
         'contact-cv-title': 'Baixar CV',
-        'contact-cv-text': 'Baixe meu currículo profissional em formato PDF',
-        'cv-download-text': 'Baixar CV (PDF)',
+        'contact-cv-text': 'Baixe meu CV completo em formato PDF',
+        'cv-download-text': 'Baixar CV',
         
         // Footer
-        'footer-rights': 'Todos os direitos reservados.',
         'footer-developed': 'Desenvolvido com',
         'footer-code': 'e muito código'
     }
@@ -212,16 +206,15 @@ const translations = {
 // Function to change language
 function changeLanguage(lang) {
     currentLanguage = lang;
+    localStorage.setItem('language', lang);
     
-    // Update page title
-    const title = document.querySelector('title');
-    if (lang === 'pt') {
-        title.textContent = 'Marcelo Hernandes da Silva - Desenvolvedor Java Senior';
-    } else {
-        title.textContent = 'Marcelo Hernandes da Silva - Java Senior Developer';
-    }
+    // Update active button state
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.getElementById(`lang-${lang}`).classList.add('active');
     
-    // Update all elements by ID
+    // Update all translatable elements
     Object.keys(translations[lang]).forEach(key => {
         const element = document.getElementById(key);
         if (element) {
@@ -229,50 +222,23 @@ function changeLanguage(lang) {
         }
     });
     
-    // Update active language button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-    
-    // Save language preference
-    localStorage.setItem('preferredLanguage', lang);
-    
-    // Update console message
-    updateConsoleMessage(lang);
+    console.log('Language changed to:', lang);
 }
 
-// Function to update console message based on language
-function updateConsoleMessage(lang) {
-    if (lang === 'pt') {
-        console.log('🌍 Idioma alterado para Português');
-        console.log('👨‍💻 Marcelo Hernandes da Silva - Desenvolvedor Java Senior');
-        console.log('🌟 28+ anos de experiência em tecnologia');
-    } else {
-        console.log('🌍 Language changed to English');
-        console.log('👨‍💻 Marcelo Hernandes da Silva - Java Senior Developer');
-        console.log('🌟 28+ years of experience in technology');
-    }
-}
-
-// Initialize language system
+// Initialize language on page load
 function initLanguage() {
-    // Check for saved language preference
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang && (savedLang === 'en' || savedLang === 'pt')) {
-        changeLanguage(savedLang);
-    } else {
-        // Default to English
-        changeLanguage('en');
-    }
+    console.log('Initializing language with:', currentLanguage);
+    changeLanguage(currentLanguage);
     
     // Add event listeners to language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            const lang = btn.dataset.lang;
+            const lang = btn.getAttribute('data-lang');
             changeLanguage(lang);
         });
     });
+    
+    console.log('Language event listeners added');
 }
 
 // Mobile Navigation Toggle
