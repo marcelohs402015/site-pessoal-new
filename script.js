@@ -9,31 +9,42 @@ function setTheme(theme) {
     
     // Update theme toggle icon
     const themeToggle = document.getElementById('theme-toggle');
-    const icon = themeToggle.querySelector('i');
-    
-    if (theme === 'dark') {
-        icon.className = 'fas fa-sun';
-        icon.style.color = '#fbbf24'; // Yellow for sun
-    } else {
-        icon.className = 'fas fa-moon';
-        icon.style.color = '#f59e0b'; // Orange for moon
+    if (themeToggle) {
+        const icon = themeToggle.querySelector('i');
+        if (icon) {
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+                icon.style.color = '#fbbf24'; // Yellow for sun
+            } else {
+                icon.className = 'fas fa-moon';
+                icon.style.color = '#f59e0b'; // Orange for moon
+            }
+        }
     }
+    
+    // Log theme change for debugging
+    console.log('Theme changed to:', theme);
 }
 
 // Function to toggle theme
 function toggleTheme() {
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
+    console.log('Theme toggled to:', newTheme);
 }
 
 // Initialize theme on page load
 function initTheme() {
+    console.log('Initializing theme with:', currentTheme);
     setTheme(currentTheme);
     
     // Add event listener to theme toggle button
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', toggleTheme);
+        console.log('Theme toggle event listener added');
+    } else {
+        console.error('Theme toggle button not found!');
     }
 }
 
