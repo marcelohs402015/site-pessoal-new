@@ -339,12 +339,35 @@ window.addEventListener('scroll', throttle(function() {
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.classList.add('loaded');
-        });
-        
-        if (img.complete) {
-            img.classList.add('loaded');
+        // Add loading state for profile image
+        if (img.classList.contains('profile-image')) {
+            const container = img.closest('.profile-image-container');
+            if (container) {
+                container.classList.add('loading');
+                
+                img.addEventListener('load', function() {
+                    container.classList.remove('loading');
+                    this.classList.add('loaded');
+                });
+                
+                img.addEventListener('error', function() {
+                    container.classList.remove('loading');
+                    console.warn('Failed to load profile image');
+                });
+                
+                if (img.complete) {
+                    container.classList.remove('loading');
+                    img.classList.add('loaded');
+                }
+            }
+        } else {
+            img.addEventListener('load', function() {
+                this.classList.add('loaded');
+            });
+            
+            if (img.complete) {
+                img.classList.add('loaded');
+            }
         }
     });
 });
