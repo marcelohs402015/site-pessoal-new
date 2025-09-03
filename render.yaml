@@ -3,7 +3,7 @@ services:
 - type: web
   name: marcelohsilva
   runtime: static
-  repo: https://github.com/marcelohs402015/site-pessoal
+  repo: https://github.com/marcelohs402015/site-pessoal-new
   staticPublishPath: ./
   autoDeployTrigger: commit
 version: "1"
