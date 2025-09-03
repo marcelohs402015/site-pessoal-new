@@ -104,7 +104,7 @@ A foto é carregada automaticamente do GitHub através da URL:
 ## 🔧 Funcionalidades JavaScript
 
 - **🌍 Sistema de Idiomas**: Troca entre Inglês e Português
-- **🌙 Toggle de Tema**: Alternância automática entre tema claro e escuro
+- **🌙 Toggle de Tema**: Alternância automática entre tema claro e escuro com persistência de preferência
 - **Navegação Mobile**: Menu hambúrguer responsivo
 - **Scroll Suave**: Navegação entre seções
 - **Animações**: Efeitos de entrada e hover

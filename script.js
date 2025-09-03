@@ -1,5 +1,44 @@
+// Theme Management
+let currentTheme = localStorage.getItem('theme') || 'light';
+
+// Function to set theme
+function setTheme(theme) {
+    currentTheme = theme;
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    
+    // Update theme toggle icon
+    const themeToggle = document.getElementById('theme-toggle');
+    const icon = themeToggle.querySelector('i');
+    
+    if (theme === 'dark') {
+        icon.className = 'fas fa-sun';
+        icon.style.color = '#fbbf24'; // Yellow for sun
+    } else {
+        icon.className = 'fas fa-moon';
+        icon.style.color = '#f59e0b'; // Orange for moon
+    }
+}
+
+// Function to toggle theme
+function toggleTheme() {
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+}
+
+// Initialize theme on page load
+function initTheme() {
+    setTheme(currentTheme);
+    
+    // Add event listener to theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+}
+
 // Language Management
-let currentLanguage = 'en'; // Default language is English
+let currentLanguage = localStorage.getItem('language') || 'en';
 
 // Language data
 const translations = {
@@ -485,6 +524,9 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize language system
     initLanguage();
+    
+    // Initialize theme
+    initTheme();
     
     // Add initial fade-in class to hero section
     const hero = document.querySelector('.hero');
