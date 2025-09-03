@@ -119,17 +119,31 @@ function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
     
     counters.forEach(counter => {
-        const target = parseInt(counter.textContent);
+        const text = counter.textContent;
+        
+        // Skip animation for non-numeric values like "AI"
+        if (text === 'AI' || text === 'N8N' || !/\d/.test(text)) {
+            return;
+        }
+        
+        // Extract numeric value and check for '+' suffix
+        const hasPlus = text.includes('+');
+        const target = parseInt(text.replace('+', ''));
+        
+        if (isNaN(target)) {
+            return; // Skip if not a valid number
+        }
+        
         const increment = target / 100;
         let current = 0;
         
         const updateCounter = () => {
             if (current < target) {
                 current += increment;
-                counter.textContent = Math.ceil(current) + (counter.textContent.includes('+') ? '+' : '');
+                counter.textContent = Math.ceil(current) + (hasPlus ? '+' : '');
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target + (counter.textContent.includes('+') ? '+' : '');
+                counter.textContent = target + (hasPlus ? '+' : '');
             }
         };
         
@@ -152,14 +166,15 @@ function animateSkillsBars() {
     });
 }
 
-// Timeline Animation
-function animateTimeline() {
-    const timelineItems = document.querySelectorAll('.timeline-item');
+// Experience Cards Animation
+function animateExperienceCards() {
+    const experienceCards = document.querySelectorAll('.experience-card');
     
-    timelineItems.forEach((item, index) => {
+    experienceCards.forEach((card, index) => {
         setTimeout(() => {
-            item.classList.add('animate-in');
-        }, index * 200);
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
+        }, index * 300);
     });
 }
 
@@ -217,13 +232,13 @@ document.addEventListener('DOMContentLoaded', function() {
         skillsObserver.observe(skillsSection);
     }
     
-    // Animate timeline when experience section is visible
+    // Animate experience cards when experience section is visible
     const experienceSection = document.querySelector('#experience');
     if (experienceSection) {
         const experienceObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateTimeline();
+                    animateExperienceCards();
                     experienceObserver.unobserve(entry.target);
                 }
             });

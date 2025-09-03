@@ -446,95 +446,192 @@ section {
     background: var(--bg-primary);
 }
 
-.timeline {
-    position: relative;
-    max-width: 800px;
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--border-color);
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.timeline-item:nth-child(odd) {
-    width: 45%;
-    left: 0;
-}
-
-.timeline-item:nth-child(even) {
-    width: 45%;
-    left: 55%;
-}
-
-.timeline-content {
+.experience-card {
     background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
     position: relative;
-    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
 }
 
-.timeline-content:hover {
-    transform: translateY(-5px);
+.experience-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.experience-card.featured {
+    border: 2px solid var(--accent-color);
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(245, 158, 11, 0.05) 100%);
+}
+
+.experience-card.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+}
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.experience-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
     box-shadow: var(--shadow-lg);
 }
 
-.timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    transform: translateY(-50%);
+.experience-meta {
+    flex: 1;
 }
 
-.timeline-item:nth-child(odd) .timeline-content::before {
-    right: -60px;
-}
-
-.timeline-item:nth-child(even) .timeline-content::before {
-    left: -60px;
-}
-
-.timeline-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+.experience-title {
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--text-primary);
-}
-
-.timeline-company {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--primary-color);
     margin-bottom: 0.5rem;
+    line-height: 1.3;
 }
 
-.timeline-period {
+.experience-company {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.experience-period {
     font-size: 0.9rem;
     color: var(--text-muted);
+    font-weight: 500;
+}
+
+.experience-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.current {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.experience-content {
+    padding: 1.5rem 2rem 2rem;
+}
+
+.experience-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.experience-impact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.impact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.impact-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.impact-item i {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.impact-item:hover i {
+    color: white;
+}
+
+.tech-stack h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
-.timeline-description {
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    padding: 0.4rem 0.8rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
     color: var(--text-secondary);
-    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
 }
 
 /* Projects Section */
@@ -968,40 +1065,61 @@ section {
         gap: 1rem;
     }
     
-    .timeline::before {
-        left: 20px;
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
     }
     
-    .timeline-item {
-        width: 100%;
-        left: 0 !important;
-        padding-left: 50px;
-        margin-bottom: 2rem;
+    .experience-card {
+        margin-bottom: 1rem;
     }
     
-    .timeline-content {
-        padding: 1.5rem;
-        margin-left: 0;
+    .experience-header {
+        padding: 1.5rem 1.5rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
     
-    .timeline-content::before {
-        left: -35px !important;
-        width: 16px;
-        height: 16px;
-    }
-    
-    .timeline-title {
+    .experience-icon {
+        width: 50px;
+        height: 50px;
         font-size: 1.2rem;
-        line-height: 1.3;
     }
     
-    .timeline-company {
+    .experience-title {
+        font-size: 1.2rem;
+    }
+    
+    .experience-company {
         font-size: 1rem;
     }
     
-    .timeline-description {
+    .experience-content {
+        padding: 1rem 1.5rem 1.5rem;
+    }
+    
+    .experience-description {
         font-size: 0.9rem;
-        line-height: 1.5;
+    }
+    
+    .experience-impact {
+        gap: 0.8rem;
+    }
+    
+    .impact-item {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .tech-tags {
+        gap: 0.4rem;
+    }
+    
+    .tech-tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
     }
     
     .projects-grid {
@@ -1138,31 +1256,64 @@ section {
         justify-content: center;
     }
     
-    .timeline-item {
-        padding-left: 40px;
-        margin-bottom: 1.5rem;
+    .experience-grid {
+        gap: 1rem;
+        padding: 0 0.5rem;
     }
     
-    .timeline-content {
-        padding: 1.2rem;
+    .experience-card {
+        margin-bottom: 0.8rem;
     }
     
-    .timeline-content::before {
-        left: -30px !important;
-        width: 14px;
-        height: 14px;
+    .experience-header {
+        padding: 1.2rem 1.2rem 0.8rem;
+        gap: 0.8rem;
     }
     
-    .timeline-title {
+    .experience-icon {
+        width: 45px;
+        height: 45px;
         font-size: 1.1rem;
     }
     
-    .timeline-company {
+    .experience-title {
+        font-size: 1.1rem;
+    }
+    
+    .experience-company {
         font-size: 0.95rem;
     }
     
-    .timeline-description {
+    .experience-content {
+        padding: 0.8rem 1.2rem 1.2rem;
+    }
+    
+    .experience-description {
         font-size: 0.85rem;
+    }
+    
+    .experience-impact {
+        gap: 0.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .impact-item {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    .tech-stack h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .tech-tags {
+        gap: 0.3rem;
+    }
+    
+    .tech-tag {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.7rem;
     }
     
     .about-stats {
