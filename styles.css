@@ -107,71 +107,7 @@ body {
 }
 
 /* Navigation Controls */
-.nav-controls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
 
-/* Language Selector */
-.language-selector {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.lang-btn {
-    background: var(--bg-card);
-    border: 2px solid var(--border-color);
-    color: var(--text-primary);
-    padding: 0.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-}
-
-.lang-btn:hover {
-    transform: scale(1.1);
-    border-color: var(--primary-color);
-    box-shadow: var(--shadow-lg);
-}
-
-.lang-btn.active {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: var(--shadow-lg);
-}
-
-.lang-btn.active .flag-icon {
-    filter: brightness(0) invert(1);
-}
-
-.flag-icon {
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.lang-btn.active .flag-icon {
-    color: white;
-    filter: none;
-}
 
 /* Theme Toggle */
 .theme-toggle {
@@ -711,19 +647,7 @@ section {
         gap: 0.5rem;
     }
     
-    .language-selector {
-        gap: 0.25rem;
-    }
-    
-    .lang-btn {
-        width: 35px;
-        height: 35px;
-        padding: 0.4rem;
-    }
-    
-    .flag-icon {
-        font-size: 1rem;
-    }
+
     
     .theme-toggle {
         top: 1rem;
@@ -823,23 +747,7 @@ section {
 }
 
 @media (max-width: 480px) {
-    .nav-controls {
-        gap: 0.25rem;
-    }
-    
-    .language-selector {
-        gap: 0.2rem;
-    }
-    
-    .lang-btn {
-        width: 30px;
-        height: 30px;
-        padding: 0.3rem;
-    }
-    
-    .flag-icon {
-        font-size: 0.9rem;
-    }
+
     
     .theme-toggle {
         top: 0.5rem;

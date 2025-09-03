@@ -4,7 +4,7 @@ Site pessoal profissional e moderno para Marcelo Hernandes da Silva, Java Senior
 
 ## ✨ Características
 
-- **🌍 Multi-idioma**: Suporte completo para Inglês e Português
+- **🌍 Idioma**: Site em Inglês
 - **🌙 Tema Escuro/Claro**: Toggle automático entre temas
 - **Design Responsivo**: Funciona perfeitamente em todos os dispositivos
 - **Interface Moderna**: Design limpo e profissional com animações suaves
@@ -22,15 +22,9 @@ Site pessoal profissional e moderno para Marcelo Hernandes da Silva, Java Senior
 - **Font Awesome**: Ícones profissionais
 - **Google Fonts**: Tipografia Inter para melhor legibilidade
 
-## 🌍 Sistema de Idiomas
+## 🌍 Idioma
 
-O site suporta **Inglês (EN)** e **Português (PT)** com as seguintes funcionalidades:
-
-- **Idioma Padrão**: Inglês (EN) é o idioma principal
-- **Seletor de Idioma**: Botões EN/PT na barra de navegação
-- **Persistência**: Lembra a preferência do usuário
-- **Tradução Completa**: Todas as seções traduzidas
-- **Mudança Dinâmica**: Troca de idioma em tempo real
+O site está em **Inglês** para melhor alcance internacional e demonstração de habilidades multilíngues.
 
 ## 📚 Documentação Técnica
 
@@ -103,7 +97,6 @@ A foto é carregada automaticamente do GitHub através da URL:
 
 ## 🔧 Funcionalidades JavaScript
 
-- **🌍 Sistema de Idiomas**: Troca entre Inglês e Português
 - **🌙 Toggle de Tema**: Alternância automática entre tema claro e escuro com persistência de preferência
 - **Navegação Mobile**: Menu hambúrguer responsivo
 - **Scroll Suave**: Navegação entre seções

@@ -10,4 +10,4 @@ services:
     healthCheckPath: /
     autoDeploy: true
     branch: main
-    repo: https://github.com/marcelohs402015/site-pessoal-new
+    repo: https://github.com/marcelohs402015/site-pessoal

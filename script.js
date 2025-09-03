@@ -35,350 +35,88 @@ function toggleTheme() {
 
 // Initialize theme on page load
 function initTheme() {
-    console.log('Initializing theme with:', currentTheme);
+    console.log('Initializing theme system with:', currentTheme);
+    
+    // Set initial theme
     setTheme(currentTheme);
     
     // Add event listener to theme toggle button
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
-        console.log('Theme toggle event listener added');
-    } else {
-        console.error('Theme toggle button not found!');
-    }
-}
-
-// Language Management
-let currentLanguage = localStorage.getItem('language') || 'en';
-
-// Language data
-const translations = {
-    en: {
-        // Navigation
-        'nav-home': 'Home',
-        'nav-about': 'About',
-        'nav-experience': 'Experience',
-        'nav-projects': 'Projects',
-        'nav-skills': 'Skills',
-        'nav-contact': 'Contact',
+        // Remove any existing listeners
+        themeToggle.removeEventListener('click', themeToggle._clickHandler);
         
-        // Hero Section
-        'hero-greeting': 'Hello, I\'m',
-        'hero-subtitle': 'Java Senior Developer & AI Specialist',
-        'hero-description': 'Professional with over 25 years of experience in software development, working with various technologies using agile methodologies. Currently specializing in Model Context Protocol (MCP) and generative AI integration, developing production-ready tools that reduce engineering overhead.',
-        'btn-projects': 'View Projects',
-        'btn-contact': 'Contact',
-        
-        // About Section
-        'about-title': 'About Me',
-        'about-text-1': 'I am a passionate Java Senior Developer with over 25 years of experience in software development, working with various technologies using agile methodologies. My journey in IT has allowed me to work with the most modern technologies and architectures.',
-        'about-text-2': 'Currently at Foursys, I am involved in migrating services from Google Cloud Platform to Equifax Cloud, as well as updating microservices written in Java 17 to Java 21 and developing new encryption microservices using Java\'s Barricade library for data cryptography. I also lead development teams, contributing to the success of projects and the professional growth of my colleagues.',
-        'about-text-3': 'I\'m currently specializing in Model Context Protocol (MCP) and generative AI integration. I\'m developing production-ready tools that reduce engineering overhead by automating repetitive tasks. My goal is to provide quality, secure, and high-performance solutions for clients, using best practices and my knowledge in information technology management.',
-        'stat-experience': 'Years of Experience',
-        'stat-ai': 'MCP & Generative AI',
-        'stat-repos': 'GitHub Repositories',
-        'stat-projects': 'Featured Projects',
-        
-        // Experience Section
-        'experience-title': 'Professional Experience',
-        'exp-1-title': 'Java Senior Developer & Team Lead',
-        'exp-1-company': 'Foursys',
-        'exp-1-period': '2023 - Present',
-        'exp-1-desc': 'Leading development teams, migrating services from GCP to Equifax Cloud, updating microservices from Java 17 to Java 21, developing encryption microservices with Java Barricade library, and specializing in MCP and generative AI integration.',
-        'exp-2-title': 'Java Mid/Senior Developer',
-        'exp-2-company': 'Technology Companies',
-        'exp-2-period': '2010 - 2020',
-        'exp-2-desc': 'Development of Java EE applications, enterprise management systems, database integration and third-party APIs.',
-        'exp-3-title': 'Java Junior/Mid Developer',
-        'exp-3-company': 'Startups and IT Companies',
-        'exp-3-period': '1995 - 2010',
-        'exp-3-desc': 'Beginning of Java development career, learning frameworks and software development methodologies.',
-        
-        // Projects Section
-        'projects-title': 'Featured Projects',
-        'project-handyman-desc': 'Complete management system for service providers, with React frontend and Java backend.',
-        'project-concierge-desc': 'Access control and concierge management system for residential buildings.',
-        'project-parking-desc': 'RESTful API for parking system with JPA and Spring Boot.',
-        'project-security-desc': 'Security and access control system for buildings with web interface.',
-        'project-spring-desc': 'Modern API with Spring Boot 3, JPA and the latest framework features.',
-        'project-quarkus-desc': 'High-performance API developed with Quarkus for cloud-native applications.',
-        'btn-demo': 'Demo',
-        'btn-code-1': 'Code',
-        'btn-code-2': 'Code',
-        'btn-code-3': 'Code',
-        'btn-code-4': 'Code',
-        'btn-code-5': 'Code',
-        
-        // Skills Section
-        'skills-title': 'Skills & Technologies',
-        'backend-title': 'Backend Development',
-        'frontend-title': 'Frontend Development',
-        'database-title': 'Database & Cloud',
-        'devops-title': 'DevOps & Tools',
-        
-        // Contact Section
-        'contact-title': 'Get In Touch',
-        'contact-info-title': 'Contact Information',
-        'contact-cv-title': 'Download CV',
-        'contact-cv-text': 'Download my complete CV in PDF format',
-        'cv-download-text': 'Download CV',
-        
-        // Footer
-        'footer-developed': 'Developed with',
-        'footer-code': 'and lots of code'
-    },
-    pt: {
-        // Navigation
-        'nav-home': 'Início',
-        'nav-about': 'Sobre',
-        'nav-experience': 'Experiência',
-        'nav-projects': 'Projetos',
-        'nav-skills': 'Habilidades',
-        'nav-contact': 'Contato',
-        
-        // Hero Section
-        'hero-greeting': 'Olá, eu sou',
-        'hero-subtitle': 'Desenvolvedor Java Sênior & Especialista em IA',
-        'hero-description': 'Profissional com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com várias tecnologias usando metodologias ágeis. Atualmente especializando-me em Model Context Protocol (MCP) e integração de IA generativa, desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia.',
-        'btn-projects': 'Ver Projetos',
-        'btn-contact': 'Contato',
-        
-        // About Section
-        'about-title': 'Sobre Mim',
-        'about-text-1': 'Sou um Desenvolvedor Java Sênior apaixonado com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com várias tecnologias usando metodologias ágeis. Minha jornada na TI me permitiu trabalhar com as tecnologias e arquiteturas mais modernas.',
-        'about-text-2': 'Atualmente na Foursys, estou envolvido na migração de serviços do Google Cloud Platform para a Equifax Cloud, bem como na atualização de microserviços escritos em Java 17 para Java 21 e no desenvolvimento de novos microserviços de criptografia usando a biblioteca Barricade do Java para criptografia de dados. Também lidero equipes de desenvolvimento, contribuindo para o sucesso dos projetos e o crescimento profissional dos meus colegas.',
-        'about-text-3': 'Atualmente estou me especializando em Model Context Protocol (MCP) e integração de IA generativa. Estou desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia automatizando tarefas repetitivas. Meu objetivo é fornecer soluções de qualidade, seguras e de alto desempenho para clientes, usando as melhores práticas e meu conhecimento em gestão de tecnologia da informação.',
-        'stat-experience': 'Anos de Experiência',
-        'stat-ai': 'MCP & IA Generativa',
-        'stat-repos': 'Repositórios GitHub',
-        'stat-projects': 'Projetos em Destaque',
-        
-        // Experience Section
-        'experience-title': 'Experiência Profissional',
-        'exp-1-title': 'Desenvolvedor Java Sênior & Líder de Equipe',
-        'exp-1-company': 'Foursys',
-        'exp-1-period': '2023 - Presente',
-        'exp-1-desc': 'Liderando equipes de desenvolvimento, migrando serviços do GCP para Equifax Cloud, atualizando microserviços do Java 17 para Java 21, desenvolvendo microserviços de criptografia com biblioteca Barricade do Java, e especializando-me em MCP e integração de IA generativa.',
-        'exp-2-title': 'Desenvolvedor Java Pleno/Sênior',
-        'exp-2-company': 'Empresas de Tecnologia',
-        'exp-2-period': '2010 - 2020',
-        'exp-2-desc': 'Desenvolvimento de aplicações Java EE, sistemas de gestão empresarial, integração de banco de dados e APIs de terceiros.',
-        'exp-3-title': 'Desenvolvedor Java Júnior/Pleno',
-        'exp-3-company': 'Startups e Empresas de TI',
-        'exp-3-period': '1995 - 2010',
-        'exp-3-desc': 'Início da carreira de desenvolvimento Java, aprendendo frameworks e metodologias de desenvolvimento de software.',
-        
-        // Projects Section
-        'projects-title': 'Projetos em Destaque',
-        'project-handyman-desc': 'Sistema completo de gestão para prestadores de serviços, com frontend React e backend Java.',
-        'project-concierge-desc': 'Sistema de controle de acesso e gestão de portaria para edifícios residenciais.',
-        'project-parking-desc': 'API RESTful para sistema de estacionamento com JPA e Spring Boot.',
-        'project-security-desc': 'Sistema de segurança e controle de acesso para edifícios com interface web.',
-        'project-spring-desc': 'API moderna com Spring Boot 3, JPA e os recursos mais recentes do framework.',
-        'project-quarkus-desc': 'API de alto desempenho desenvolvida com Quarkus para aplicações cloud-native.',
-        'btn-demo': 'Demo',
-        'btn-code-1': 'Código',
-        'btn-code-2': 'Código',
-        'btn-code-3': 'Código',
-        'btn-code-4': 'Código',
-        'btn-code-5': 'Código',
-        
-        // Skills Section
-        'skills-title': 'Habilidades & Tecnologias',
-        'backend-title': 'Desenvolvimento Backend',
-        'frontend-title': 'Desenvolvimento Frontend',
-        'database-title': 'Banco de Dados & Cloud',
-        'devops-title': 'DevOps & Ferramentas',
-        
-        // Contact Section
-        'contact-title': 'Entre em Contato',
-        'contact-info-title': 'Informações de Contato',
-        'contact-cv-title': 'Baixar CV',
-        'contact-cv-text': 'Baixe meu CV completo em formato PDF',
-        'cv-download-text': 'Baixar CV',
-        
-        // Footer
-        'footer-developed': 'Desenvolvido com',
-        'footer-code': 'e muito código'
-    }
-};
-
-// Function to change language
-function changeLanguage(lang) {
-    console.log('Changing language to:', lang);
-    currentLanguage = lang;
-    localStorage.setItem('language', lang);
-    
-    // Update active button state
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    const activeBtn = document.getElementById(`lang-${lang}`);
-    if (activeBtn) {
-        activeBtn.classList.add('active');
-        console.log('Active button updated:', activeBtn.id);
-    } else {
-        console.error('Active button not found:', `lang-${lang}`);
-    }
-    
-    // Update all translatable elements
-    Object.keys(translations[lang]).forEach(key => {
-        const element = document.getElementById(key);
-        if (element) {
-            element.textContent = translations[lang][key];
-            console.log(`Updated element ${key} with: ${translations[lang][key]}`);
-        } else {
-            console.log(`Element not found: ${key}`);
-        }
-    });
-    
-    console.log('Language successfully changed to:', lang);
-}
-
-// Initialize language on page load
-function initLanguage() {
-    console.log('Initializing language system with:', currentLanguage);
-    
-    // Set initial language
-    changeLanguage(currentLanguage);
-    
-    // Add event listeners to language buttons
-    const langButtons = document.querySelectorAll('.lang-btn');
-    console.log('Found language buttons:', langButtons.length);
-    
-    langButtons.forEach(btn => {
-        const lang = btn.getAttribute('data-lang');
-        const btnId = btn.id;
-        console.log(`Adding event listener to button: ${btnId} (${lang})`);
-        
-        btn.addEventListener('click', (e) => {
+        // Create new handler
+        themeToggle._clickHandler = function(e) {
             e.preventDefault();
-            console.log(`Button clicked: ${btnId}, language: ${lang}`);
-            changeLanguage(lang);
+            e.stopPropagation();
+            console.log('Theme toggle button clicked!');
+            toggleTheme();
+        };
+        
+        // Add new listener
+        themeToggle.addEventListener('click', themeToggle._clickHandler);
+        console.log('Theme toggle event listener added successfully');
+    } else {
+        console.error('Theme toggle button not found during initialization!');
+    }
+}
+
+// Navigation and UI Functions
+function initNavigation() {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
     
-    console.log('Language system initialized successfully');
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
 }
 
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// Animation Functions
+function initAnimations() {
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
-
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-up');
-        }
-    });
-}, observerOptions);
-
-// Observe all sections for animation
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});
-
-// Animate skill bars when they come into view
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const skillBars = entry.target.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 200);
-            });
-        }
-    });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.skill-category').forEach(category => {
-    skillObserver.observe(category);
-});
-
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => observer.observe(el));
 }
 
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
-        typeWriter(heroTitle, originalText, 50);
-    }
-});
-
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const rate = scrolled * -0.5;
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
-
-// Counter animation for stats
+// Statistics Counter Animation
 function animateCounters() {
-    const counters = document.querySelectorAll('.stat-item h3');
+    const counters = document.querySelectorAll('.stat-number');
     
     counters.forEach(counter => {
         const target = parseInt(counter.textContent);
@@ -388,10 +126,10 @@ function animateCounters() {
         const updateCounter = () => {
             if (current < target) {
                 current += increment;
-                counter.textContent = Math.ceil(current) + '+';
-                setTimeout(updateCounter, 20);
+                counter.textContent = Math.ceil(current) + (counter.textContent.includes('+') ? '+' : '');
+                requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target + '+';
+                counter.textContent = target + (counter.textContent.includes('+') ? '+' : '');
             }
         };
         
@@ -399,147 +137,176 @@ function animateCounters() {
     });
 }
 
-// Trigger counter animation when about section is visible
-const aboutObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounters();
-            aboutObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const aboutSection = document.querySelector('.about');
-if (aboutSection) {
-    aboutObserver.observe(aboutSection);
-}
-
-// Project cards hover effect
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
+// Skills Bar Animation
+function animateSkillsBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
     
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// Timeline animation
-const timelineObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateX(0)';
-        }
-    });
-}, { threshold: 0.3 });
-
-document.querySelectorAll('.timeline-content').forEach((item, index) => {
-    item.style.opacity = '0';
-    if (index % 2 === 0) {
-        item.style.transform = 'translateX(-50px)';
-    } else {
-        item.style.transform = 'translateX(50px)';
-    }
-    item.style.transition = 'all 0.6s ease';
-    timelineObserver.observe(item);
-});
-
-// Smooth reveal for sections
-function revealOnScroll() {
-    const reveals = document.querySelectorAll('.section-title, .about-text, .project-card, .skill-category');
-    
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
+    skillBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0%';
         
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('fade-in-up');
-        }
+        setTimeout(() => {
+            bar.style.transition = 'width 1.5s ease-in-out';
+            bar.style.width = width;
+        }, 500);
     });
 }
 
-window.addEventListener('scroll', revealOnScroll);
-
-// Active navigation link highlighting
-function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+// Timeline Animation
+function animateTimeline() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
     
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+    timelineItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('animate-in');
+        }, index * 200);
     });
 }
 
-window.addEventListener('scroll', updateActiveNavLink);
+// Project Cards Animation
+function animateProjectCards() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('animate-in');
+        }, index * 150);
+    });
+}
 
-// Add active class styles to CSS
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: var(--primary-color) !important;
-    }
+// Initialize all functions when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing site...');
     
-    .nav-link.active::after {
-        width: 100% !important;
-    }
-    
-    .fade-in-up {
-        animation: fadeInUp 0.6s ease forwards;
-    }
-    
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`;
-document.head.appendChild(style);
-
-// Initialize all animations when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize language system
-    initLanguage();
-    
-    // Initialize theme
+    // Initialize theme system
     initTheme();
     
-    // Add initial fade-in class to hero section
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.classList.add('fade-in-up');
+    // Initialize navigation
+    initNavigation();
+    
+    // Initialize animations
+    initAnimations();
+    
+    // Animate counters when about section is visible
+    const aboutSection = document.querySelector('#about');
+    if (aboutSection) {
+        const aboutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    aboutObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        aboutObserver.observe(aboutSection);
     }
     
-    // Preload profile image
-    const profileImage = document.querySelector('.profile-image');
-    if (profileImage) {
-        const img = new Image();
-        img.onload = () => {
-            profileImage.style.opacity = '1';
-        };
-        img.src = profileImage.src;
+    // Animate skills bars when skills section is visible
+    const skillsSection = document.querySelector('#skills');
+    if (skillsSection) {
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillsBars();
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        skillsObserver.observe(skillsSection);
     }
+    
+    // Animate timeline when experience section is visible
+    const experienceSection = document.querySelector('#experience');
+    if (experienceSection) {
+        const experienceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateTimeline();
+                    experienceObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        experienceObserver.observe(experienceSection);
+    }
+    
+    // Animate project cards when projects section is visible
+    const projectsSection = document.querySelector('#projects');
+    if (projectsSection) {
+        const projectsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateProjectCards();
+                    projectsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        projectsObserver.observe(projectsSection);
+    }
+    
+    console.log('Site initialization complete!');
+});
+
+// Add smooth scrolling behavior
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for all internal links
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+// Add hover effects for interactive elements
+document.addEventListener('DOMContentLoaded', function() {
+    // Add hover effects to project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = 'var(--shadow-xl)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'var(--shadow-lg)';
+        });
+    });
+    
+    // Add hover effects to skill bars
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const progressBar = this.querySelector('.skill-progress');
+            if (progressBar) {
+                progressBar.style.transform = 'scaleX(1.05)';
+            }
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            const progressBar = this.querySelector('.skill-progress');
+            if (progressBar) {
+                progressBar.style.transform = 'scaleX(1)';
+            }
+        });
+    });
 });
 
 // Performance optimization: Throttle scroll events
@@ -553,56 +320,115 @@ function throttle(func, limit) {
             inThrottle = true;
             setTimeout(() => inThrottle = false, limit);
         }
-    }
+    };
 }
 
-// Apply throttling to scroll events
-window.addEventListener('scroll', throttle(() => {
-    updateActiveNavLink();
-    revealOnScroll();
-}, 16)); // 60fps
+// Add scroll-based navbar styling
+window.addEventListener('scroll', throttle(function() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+}, 100));
 
 // Add loading animation for images
-document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('load', function() {
-        this.style.opacity = '1';
-    });
-    
-    img.style.opacity = '0';
-    img.style.transition = 'opacity 0.3s ease';
-});
-
-// Error handling for failed image loads
-document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', function() {
-        this.style.display = 'none';
-        console.warn('Failed to load image:', this.src);
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.classList.add('loaded');
+        });
+        
+        if (img.complete) {
+            img.classList.add('loaded');
+        }
     });
 });
 
 // Add keyboard navigation support
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', function(e) {
+    // Escape key to close mobile menu
     if (e.key === 'Escape') {
-        // Close mobile menu with Escape key
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        const navMenu = document.querySelector('.nav-menu');
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        
+        if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.classList.remove('active');
+            }
+        }
+    }
+    
+    // Tab key navigation enhancement
+    if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
     }
 });
 
-// Add focus management for accessibility
-document.querySelectorAll('.nav-link, .btn, .project-link, .social-link').forEach(link => {
-    link.addEventListener('focus', function() {
-        this.style.outline = '2px solid var(--primary-color)';
-        this.style.outlineOffset = '2px';
-    });
-    
-    link.addEventListener('blur', function() {
-        this.style.outline = 'none';
-    });
+// Remove keyboard navigation class when mouse is used
+document.addEventListener('mousedown', function() {
+    document.body.classList.remove('keyboard-navigation');
 });
 
-console.log('🚀 Personal website loaded successfully!');
-console.log('🌍 Multi-language support: English (EN) and Portuguese (PT)');
-console.log('👨‍💻 Marcelo Hernandes da Silva - Java Senior Developer');
-console.log('🌟 28+ years of experience in technology');
-console.log('💡 Tip: Click EN/PT buttons to change language');
+// Add focus management for accessibility
+document.addEventListener('DOMContentLoaded', function() {
+    // Skip to main content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = `
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 1000;
+        transition: top 0.3s;
+    `;
+    
+    skipLink.addEventListener('focus', function() {
+        this.style.top = '6px';
+    });
+    
+    skipLink.addEventListener('blur', function() {
+        this.style.top = '-40px';
+    });
+    
+    document.body.insertBefore(skipLink, document.body.firstChild);
+    
+    // Add main content id
+    const mainContent = document.querySelector('main') || document.querySelector('.hero');
+    if (mainContent) {
+        mainContent.id = 'main';
+    }
+});
+
+// Add error handling for external resources
+window.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG' || e.target.tagName === 'LINK') {
+        console.warn('Failed to load external resource:', e.target.src || e.target.href);
+    }
+}, true);
+
+// Add performance monitoring
+window.addEventListener('load', function() {
+    // Log performance metrics
+    if ('performance' in window) {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        if (perfData) {
+            console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+            console.log('DOM content loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+        }
+    }
+});
+
+console.log('Script loaded successfully!');
