@@ -6,7 +6,7 @@ Site pessoal profissional e moderno para Marcelo Hernandes da Silva, Java Senior
 
 - **🌍 Idioma**: Site em Inglês
 - **👤 Foto de Perfil**: Foto elegante do GitHub com animações
-- **🌙 Tema Escuro/Claro**: Toggle automático entre temas
+- **🌙 Tema Escuro/Claro**: Dark mode como padrão com toggle para light mode
 - **Design Responsivo**: Funciona perfeitamente em todos os dispositivos
 - **Interface Moderna**: Design limpo e profissional com animações suaves
 - **Navegação Intuitiva**: Menu de navegação fixo com scroll suave
@@ -99,7 +99,7 @@ A foto é carregada automaticamente do GitHub através da URL:
 ## 🔧 Funcionalidades JavaScript
 
 - **👤 Foto de Perfil**: Carregamento elegante com indicador de loading e animações
-- **🌙 Toggle de Tema**: Alternância automática entre tema claro e escuro com persistência de preferência
+- **🌙 Toggle de Tema**: Dark mode como padrão com alternância para light mode e persistência de preferência
 - **📧 Contato via Email**: Botão direto para envio de email com template pré-preenchido
 - **Navegação Mobile**: Menu hambúrguer responsivo
 - **Scroll Suave**: Navegação entre seções

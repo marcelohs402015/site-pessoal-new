@@ -1,5 +1,5 @@
 // Theme Management
-let currentTheme = localStorage.getItem('theme') || 'light';
+let currentTheme = localStorage.getItem('theme') || 'dark';
 
 // Function to set theme
 function setTheme(theme) {
