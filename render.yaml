@@ -15,5 +15,3 @@ services:
     autoDeploy: true
     branch: main
     repo: https://github.com/marcelohs402015/site-pessoal-new
-    plan: starter
-    region: oregon
