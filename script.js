@@ -70,6 +70,9 @@ const translations = {
         'contact-subtitle': 'Let\'s Talk!',
         'contact-text': 'I\'m always open to new opportunities and interesting collaborations. If you have a project in mind or would like to discuss possibilities, don\'t hesitate to get in touch.',
         'contact-social': 'Social Media',
+        'contact-cv-title': 'Download CV',
+        'contact-cv-text': 'Get my professional resume in PDF format',
+        'cv-download-text': 'Download CV (PDF)',
         
         // Footer
         'footer-rights': 'All rights reserved.',
@@ -143,6 +146,9 @@ const translations = {
         'contact-subtitle': 'Vamos Conversar!',
         'contact-text': 'Estou sempre aberto a novas oportunidades e colaborações interessantes. Se você tem um projeto em mente ou gostaria de discutir possibilidades, não hesite em entrar em contato.',
         'contact-social': 'Redes Sociais',
+        'contact-cv-title': 'Baixar CV',
+        'contact-cv-text': 'Baixe meu currículo profissional em formato PDF',
+        'cv-download-text': 'Baixar CV (PDF)',
         
         // Footer
         'footer-rights': 'Todos os direitos reservados.',

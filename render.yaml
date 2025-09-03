@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: marcelo-hernandes-site-pessoal
+    runtime: static
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: RENDER
+        value: true
+      - key: SITE_URL
+        value: https://marcelohsilva.com.br
+    healthCheckPath: /
+    autoDeploy: true
+    branch: main
+    repo: https://github.com/marcelohs402015/site-pessoal-new
+    plan: starter
+    region: oregon
