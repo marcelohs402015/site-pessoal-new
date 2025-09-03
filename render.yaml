@@ -3,11 +3,34 @@ services:
     name: marcelo-hernandes-site-pessoal
     runtime: static
     buildCommand: ""
-    startCommand: ""
-    envVars:
-      - key: NODE_ENV
-        value: production
-    healthCheckPath: /
     autoDeploy: true
     branch: main
     repo: https://github.com/marcelohs402015/site-pessoal
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /*.css
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.js
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.png
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.jpg
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.jpeg
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.gif
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.svg
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*.ico
+        name: Cache-Control
+        value: public, max-age=86400
