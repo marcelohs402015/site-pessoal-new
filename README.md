@@ -42,7 +42,7 @@ Documentação completa disponível na pasta `docs/`:
 3. **Experiência**: Timeline da carreira profissional
 4. **Projetos**: Portfólio de projetos em destaque
 5. **Habilidades**: Competências técnicas com barras de progresso
-6. **Contato**: Informações de contato e redes sociais
+6. **Contato**: Informações de contato, redes sociais e contato direto via email
 
 ## 🚀 Como Usar
 
@@ -100,6 +100,7 @@ A foto é carregada automaticamente do GitHub através da URL:
 
 - **👤 Foto de Perfil**: Carregamento elegante com indicador de loading e animações
 - **🌙 Toggle de Tema**: Alternância automática entre tema claro e escuro com persistência de preferência
+- **📧 Contato via Email**: Botão direto para envio de email com template pré-preenchido
 - **Navegação Mobile**: Menu hambúrguer responsivo
 - **Scroll Suave**: Navegação entre seções
 - **Animações**: Efeitos de entrada e hover
