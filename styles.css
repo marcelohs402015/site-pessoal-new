@@ -62,7 +62,7 @@ body {
     position: fixed;
     top: 2rem;
     right: 2rem;
-    z-index: 1000;
+    z-index: 1001;
     background: var(--bg-card);
     border: 2px solid var(--border-color);
     border-radius: 50px;
@@ -75,6 +75,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    overflow: hidden;
 }
 
 .theme-toggle:hover {
@@ -86,6 +88,12 @@ body {
 .theme-toggle i {
     font-size: 1.2rem;
     transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle .fa-moon {
@@ -112,7 +120,7 @@ body {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
+    z-index: 999;
     transition: all 0.3s ease;
 }
 
@@ -813,6 +821,7 @@ section {
         right: 1rem;
         width: 45px;
         height: 45px;
+        z-index: 1001;
     }
     
     .theme-toggle i {
@@ -822,6 +831,7 @@ section {
     .language-selector {
         order: -1;
         margin-right: auto;
+        z-index: 999;
     }
     
     .hamburger {
@@ -915,6 +925,7 @@ section {
         right: 0.5rem;
         width: 40px;
         height: 40px;
+        z-index: 1001;
     }
     
     .hero h1 {
