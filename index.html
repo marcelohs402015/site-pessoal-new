@@ -11,62 +11,60 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>MHS</span>
-            </div>
-            <div class="language-selector">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="pt">PT</button>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link" id="nav-home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link" id="nav-about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#home" class="logo">MarceloHS</a>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" id="nav-home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" id="nav-about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span id="hero-greeting">Hello, I'm</span> <span class="highlight">Marcelo Hernandes da Silva</span>
-                    </h1>
-                    <h2 class="hero-subtitle" id="hero-subtitle">Java Senior Developer</h2>
-                    <p class="hero-description" id="hero-description">
-                        Professional with over 28 years of experience in the information technology market, developing systems in Java, Cloud Deploy, GCP, Bucket, Pub/Sub, Node.js
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary" id="btn-projects">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary" id="btn-contact">Contact</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://github.com/marcelohs402015.png" alt="Marcelo Hernandes da Silva" class="profile-image">
-                </div>
+        <div class="hero-content">
+            <h1>
+                <span id="hero-greeting">Hello, I'm</span> <span class="highlight">Marcelo Hernandes da Silva</span>
+            </h1>
+            <h2 id="hero-subtitle">Java Senior Developer & AI Specialist</h2>
+            <p id="hero-description">
+                Professional with over 25 years of experience in software development, working with various technologies using agile methodologies. Currently specializing in Model Context Protocol (MCP) and generative AI integration, developing production-ready tools that reduce engineering overhead.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary" id="btn-projects">View Projects</a>
+                <a href="#contact" class="btn btn-secondary" id="btn-contact">Contact</a>
             </div>
         </div>
     </section>
@@ -78,27 +76,31 @@
             <div class="about-content">
                 <div class="about-text">
                     <p id="about-text-1">
-                        I am a passionate Java Senior Developer with over two decades of experience in developing enterprise systems. My journey in IT has allowed me to work with the most modern technologies and architectures.
+                        I am a passionate Java Senior Developer with over 25 years of experience in software development, working with various technologies using agile methodologies. My journey in IT has allowed me to work with the most modern technologies and architectures.
                     </p>
                     <p id="about-text-2">
-                        Specialized in backend development with Java, Spring Boot, Quarkus and RESTful APIs. I have solid experience in cloud computing, especially Google Cloud Platform (GCP) and Amazon Web Services (AWS), including services like Lambda, SQS, SNS and S3.
+                        Currently at <strong>Foursys</strong>, I am involved in migrating services from Google Cloud Platform to Equifax Cloud, as well as updating microservices written in Java 17 to Java 21 and developing new encryption microservices using Java's Barricade library for data cryptography. I also lead development teams, contributing to the success of projects and the professional growth of my colleagues.
                     </p>
                     <p id="about-text-3">
-                        Currently based in Vancouver, CA, I continue to expand my knowledge and contribute to innovative projects that make a difference.
+                        I'm currently specializing in <strong>Model Context Protocol (MCP)</strong> and <strong>generative AI integration</strong>. I'm developing production-ready tools that reduce engineering overhead by automating repetitive tasks. My goal is to provide quality, secure, and high-performance solutions for clients, using best practices and my knowledge in information technology management.
                     </p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <h3>28+</h3>
-                        <p id="stat-experience">Years of Experience</p>
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label" id="stat-experience">Years of Experience</div>
                     </div>
                     <div class="stat-item">
-                        <h3>21</h3>
-                        <p id="stat-repos">GitHub Repositories</p>
+                        <div class="stat-number">21</div>
+                        <div class="stat-label" id="stat-repos">GitHub Repositories</div>
                     </div>
                     <div class="stat-item">
-                        <h3>7</h3>
-                        <p id="stat-projects">Featured Projects</p>
+                        <div class="stat-number">7</div>
+                        <div class="stat-label" id="stat-projects">Featured Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">AI</div>
+                        <div class="stat-label" id="stat-ai">MCP & Generative AI</div>
                     </div>
                 </div>
             </div>
@@ -112,17 +114,17 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3 id="exp-1-title">Java Senior Developer</h3>
-                        <p class="timeline-company" id="exp-1-company">Freelancer / Independent Consultant</p>
-                        <p class="timeline-period" id="exp-1-period">2020 - Present</p>
+                        <h3 class="timeline-title" id="exp-1-title">Java Senior Developer & Team Lead</h3>
+                        <p class="timeline-company" id="exp-1-company">Foursys</p>
+                        <p class="timeline-period" id="exp-1-period">2023 - Present</p>
                         <p class="timeline-description" id="exp-1-desc">
-                            Development of enterprise systems, RESTful APIs with Spring Boot and Quarkus, implementation of cloud-native solutions with GCP and AWS.
+                            Leading development teams, migrating services from GCP to Equifax Cloud, updating microservices from Java 17 to Java 21, developing encryption microservices with Java Barricade library, and specializing in MCP and generative AI integration.
                         </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3 id="exp-2-title">Java Mid/Senior Developer</h3>
+                        <h3 class="timeline-title" id="exp-2-title">Java Mid/Senior Developer</h3>
                         <p class="timeline-company" id="exp-2-company">Technology Companies</p>
                         <p class="timeline-period" id="exp-2-period">2010 - 2020</p>
                         <p class="timeline-description" id="exp-2-desc">
@@ -132,7 +134,7 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3 id="exp-3-title">Java Junior/Mid Developer</h3>
+                        <h3 class="timeline-title" id="exp-3-title">Java Junior/Mid Developer</h3>
                         <p class="timeline-company" id="exp-3-company">Startups and IT Companies</p>
                         <p class="timeline-period" id="exp-3-period">1995 - 2010</p>
                         <p class="timeline-description" id="exp-3-desc">
@@ -154,16 +156,14 @@
                         <i class="fas fa-tools"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Handyman Manager</h3>
-                        <p id="project-handyman-desc">Complete management system for service providers, with React frontend and Java backend.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://handyman-manager-frontend.onrender.com/" target="_blank" class="project-link">
+                        <h3 class="project-title">Handyman Manager</h3>
+                        <p class="project-description" id="project-handyman-desc">Complete management system for service providers, with React frontend and Java backend.</p>
+                        <div class="project-buttons">
+                            <a href="https://handyman-manager-frontend.onrender.com/" target="_blank" class="project-btn demo">
                                 <i class="fas fa-external-link-alt"></i> <span id="btn-demo">Demo</span>
+                            </a>
+                            <a href="https://github.com/marcelohs402015/handyman-manager" target="_blank" class="project-btn code">
+                                <i class="fab fa-github"></i> <span>Code</span>
                             </a>
                         </div>
                     </div>
@@ -174,15 +174,10 @@
                         <i class="fas fa-building"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Building Concierge</h3>
-                        <p id="project-concierge-desc">Access control and concierge management system for residential buildings.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/marcelohs402015/PortariaCondominio" target="_blank" class="project-link">
+                        <h3 class="project-title">Building Concierge</h3>
+                        <p class="project-description" id="project-concierge-desc">Access control and concierge management system for residential buildings.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/marcelohs402015/PortariaCondominio" target="_blank" class="project-btn code">
                                 <i class="fab fa-github"></i> <span id="btn-code-1">Code</span>
                             </a>
                         </div>
@@ -194,15 +189,10 @@
                         <i class="fas fa-car"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Parking JPA API</h3>
-                        <p id="project-parking-desc">RESTful API for parking system with JPA and Spring Boot.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">JPA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/marcelohs402015/parking-jpa-api" target="_blank" class="project-link">
+                        <h3 class="project-title">Parking JPA API</h3>
+                        <p class="project-description" id="project-parking-desc">RESTful API for parking system with JPA and Spring Boot.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/marcelohs402015/parking-jpa-api" target="_blank" class="project-btn code">
                                 <i class="fab fa-github"></i> <span id="btn-code-2">Code</span>
                             </a>
                         </div>
@@ -214,15 +204,10 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Building Security</h3>
-                        <p id="project-security-desc">Security and access control system for buildings with web interface.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/marcelohs402015/condominio_seguranca" target="_blank" class="project-link">
+                        <h3 class="project-title">Building Security</h3>
+                        <p class="project-description" id="project-security-desc">Security and access control system for buildings with web interface.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/marcelohs402015/condominio_seguranca" target="_blank" class="project-btn code">
                                 <i class="fab fa-github"></i> <span id="btn-code-3">Code</span>
                             </a>
                         </div>

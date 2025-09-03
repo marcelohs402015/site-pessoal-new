@@ -14,26 +14,27 @@ const translations = {
         
         // Hero Section
         'hero-greeting': 'Hello, I\'m',
-        'hero-subtitle': 'Java Senior Developer',
-        'hero-description': 'Professional with over 28 years of experience in the information technology market, developing systems in Java, Cloud Deploy, GCP, Bucket, Pub/Sub, Node.js',
+        'hero-subtitle': 'Java Senior Developer & AI Specialist',
+        'hero-description': 'Professional with over 25 years of experience in software development, working with various technologies using agile methodologies. Currently specializing in Model Context Protocol (MCP) and generative AI integration, developing production-ready tools that reduce engineering overhead.',
         'btn-projects': 'View Projects',
         'btn-contact': 'Contact',
         
         // About Section
         'about-title': 'About Me',
-        'about-text-1': 'I am a passionate Java Senior Developer with over two decades of experience in developing enterprise systems. My journey in IT has allowed me to work with the most modern technologies and architectures.',
-        'about-text-2': 'Specialized in backend development with Java, Spring Boot, Quarkus and RESTful APIs. I have solid experience in cloud computing, especially Google Cloud Platform (GCP) and Amazon Web Services (AWS), including services like Lambda, SQS, SNS and S3.',
-        'about-text-3': 'Currently based in Vancouver, CA, I continue to expand my knowledge and contribute to innovative projects that make a difference.',
+        'about-text-1': 'I am a passionate Java Senior Developer with over 25 years of experience in software development, working with various technologies using agile methodologies. My journey in IT has allowed me to work with the most modern technologies and architectures.',
+        'about-text-2': 'Currently at Foursys, I am involved in migrating services from Google Cloud Platform to Equifax Cloud, as well as updating microservices written in Java 17 to Java 21 and developing new encryption microservices using Java\'s Barricade library for data cryptography. I also lead development teams, contributing to the success of projects and the professional growth of my colleagues.',
+        'about-text-3': 'I\'m currently specializing in Model Context Protocol (MCP) and generative AI integration. I\'m developing production-ready tools that reduce engineering overhead by automating repetitive tasks. My goal is to provide quality, secure, and high-performance solutions for clients, using best practices and my knowledge in information technology management.',
         'stat-experience': 'Years of Experience',
+        'stat-ai': 'MCP & Generative AI',
         'stat-repos': 'GitHub Repositories',
         'stat-projects': 'Featured Projects',
         
         // Experience Section
         'experience-title': 'Professional Experience',
-        'exp-1-title': 'Java Senior Developer',
-        'exp-1-company': 'Freelancer / Independent Consultant',
-        'exp-1-period': '2020 - Present',
-        'exp-1-desc': 'Development of enterprise systems, RESTful APIs with Spring Boot and Quarkus, implementation of cloud-native solutions with GCP and AWS.',
+        'exp-1-title': 'Java Senior Developer & Team Lead',
+        'exp-1-company': 'Foursys',
+        'exp-1-period': '2023 - Present',
+        'exp-1-desc': 'Leading development teams, migrating services from GCP to Equifax Cloud, updating microservices from Java 17 to Java 21, developing encryption microservices with Java Barricade library, and specializing in MCP and generative AI integration.',
         'exp-2-title': 'Java Mid/Senior Developer',
         'exp-2-company': 'Technology Companies',
         'exp-2-period': '2010 - 2020',
@@ -90,26 +91,27 @@ const translations = {
         
         // Hero Section
         'hero-greeting': 'Olá, eu sou',
-        'hero-subtitle': 'Desenvolvedor Java Senior',
-        'hero-description': 'Profissional com mais de 28 anos de experiência no mercado de tecnologia da informação, desenvolvendo sistemas em Java, Deploy em Cloud, GCP, AWS e Node.js',
+        'hero-subtitle': 'Desenvolvedor Java Senior & Especialista em IA',
+        'hero-description': 'Profissional com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com diversas tecnologias usando metodologias ágeis. Atualmente especializando-se em Model Context Protocol (MCP) e integração de IA generativa, desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia.',
         'btn-projects': 'Ver Projetos',
         'btn-contact': 'Contato',
         
         // About Section
         'about-title': 'Sobre Mim',
-        'about-text-1': 'Sou um desenvolvedor Java Senior apaixonado por tecnologia, com mais de duas décadas de experiência no desenvolvimento de sistemas empresariais. Minha jornada na área de TI me permitiu trabalhar com as mais modernas tecnologias e arquiteturas.',
-        'about-text-2': 'Especializado em desenvolvimento backend com Java, Spring Boot, Quarkus e APIs RESTful. Tenho experiência sólida em cloud computing, especialmente Google Cloud Platform (GCP) e Amazon Web Services (AWS), incluindo serviços como Lambda, SQS, SNS e S3.',
-        'about-text-3': 'Atualmente baseado em Vancouver, CA, continuo expandindo meus conhecimentos e contribuindo para projetos inovadores que fazem a diferença.',
+        'about-text-1': 'Sou um desenvolvedor Java Senior apaixonado por tecnologia, com mais de 25 anos de experiência em desenvolvimento de software, trabalhando com diversas tecnologias usando metodologias ágeis. Minha jornada na área de TI me permitiu trabalhar com as mais modernas tecnologias e arquiteturas.',
+        'about-text-2': 'Atualmente na Foursys, estou envolvido na migração de serviços do Google Cloud Platform para Equifax Cloud, bem como na atualização de microserviços escritos em Java 17 para Java 21 e no desenvolvimento de novos microserviços de criptografia usando a biblioteca Barricade do Java para criptografia de dados. Também lidero equipes de desenvolvimento, contribuindo para o sucesso dos projetos e o crescimento profissional dos meus colegas.',
+        'about-text-3': 'Atualmente estou me especializando em Model Context Protocol (MCP) e integração de IA generativa. Estou desenvolvendo ferramentas prontas para produção que reduzem a sobrecarga de engenharia automatizando tarefas repetitivas. Meu objetivo é fornecer soluções de qualidade, seguras e de alto desempenho para os clientes, usando as melhores práticas e meu conhecimento em gestão de tecnologia da informação.',
         'stat-experience': 'Anos de Experiência',
+        'stat-ai': 'MCP & IA Generativa',
         'stat-repos': 'Repositórios GitHub',
         'stat-projects': 'Projetos em Destaque',
         
         // Experience Section
         'experience-title': 'Experiência Profissional',
-        'exp-1-title': 'Java Senior Developer',
-        'exp-1-company': 'Freelancer / Consultor Independente',
-        'exp-1-period': '2020 - Presente',
-        'exp-1-desc': 'Desenvolvimento de sistemas empresariais, APIs RESTful com Spring Boot e Quarkus, implementação de soluções cloud-native com GCP e AWS.',
+        'exp-1-title': 'Desenvolvedor Java Senior & Líder de Equipe',
+        'exp-1-company': 'Foursys',
+        'exp-1-period': '2023 - Presente',
+        'exp-1-desc': 'Liderando equipes de desenvolvimento, migrando serviços do GCP para Equifax Cloud, atualizando microserviços de Java 17 para Java 21, desenvolvendo microserviços de criptografia com biblioteca Barricade do Java, e especializando-se em MCP e integração de IA generativa.',
         'exp-2-title': 'Desenvolvedor Java Pleno/Sênior',
         'exp-2-company': 'Empresas de Tecnologia',
         'exp-2-period': '2010 - 2020',
