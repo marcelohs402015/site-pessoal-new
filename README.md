@@ -30,6 +30,14 @@ O site suporta **Inglês (EN)** e **Português (PT)** com as seguintes funcional
 - **Tradução Completa**: Todas as seções traduzidas
 - **Mudança Dinâmica**: Troca de idioma em tempo real
 
+## 📚 Documentação Técnica
+
+Documentação completa disponível na pasta `docs/`:
+
+- **`PRD.md`**: Product Requirements Document com especificações técnicas
+- **`TIMELINE.md`**: Cronologia detalhada do desenvolvimento
+- **`CV_MarceloHSilva_JavaDeveloperSenior.pdf`**: Currículo profissional
+
 ## 📱 Seções do Site
 
 1. **Hero Section**: Apresentação principal com foto e descrição
@@ -58,7 +66,11 @@ site-pessoal/
 ├── index.html          # Arquivo principal HTML
 ├── styles.css          # Estilos CSS
 ├── script.js           # Funcionalidades JavaScript
-└── README.md           # Este arquivo
+├── README.md           # Este arquivo
+└── docs/               # Documentação técnica
+    ├── PRD.md          # Product Requirements Document
+    ├── TIMELINE.md     # Cronologia do desenvolvimento
+    └── CV_MarceloHSilva_JavaDeveloperSenior.pdf
 ```
 
 ## 🎨 Personalização
@@ -96,6 +108,7 @@ A foto é carregada automaticamente do GitHub através da URL:
 - **Timeline**: Animação da linha do tempo
 - **Contadores**: Animação dos números estatísticos
 - **Barras de Habilidade**: Animação das barras de progresso
+- **Documentação**: Sistema completo de documentação técnica
 
 ## 📱 Responsividade
 
