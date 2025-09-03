@@ -205,6 +205,7 @@ const translations = {
 
 // Function to change language
 function changeLanguage(lang) {
+    console.log('Changing language to:', lang);
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     
@@ -212,33 +213,52 @@ function changeLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    document.getElementById(`lang-${lang}`).classList.add('active');
+    const activeBtn = document.getElementById(`lang-${lang}`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+        console.log('Active button updated:', activeBtn.id);
+    } else {
+        console.error('Active button not found:', `lang-${lang}`);
+    }
     
     // Update all translatable elements
     Object.keys(translations[lang]).forEach(key => {
         const element = document.getElementById(key);
         if (element) {
             element.textContent = translations[lang][key];
+            console.log(`Updated element ${key} with: ${translations[lang][key]}`);
+        } else {
+            console.log(`Element not found: ${key}`);
         }
     });
     
-    console.log('Language changed to:', lang);
+    console.log('Language successfully changed to:', lang);
 }
 
 // Initialize language on page load
 function initLanguage() {
-    console.log('Initializing language with:', currentLanguage);
+    console.log('Initializing language system with:', currentLanguage);
+    
+    // Set initial language
     changeLanguage(currentLanguage);
     
     // Add event listeners to language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang');
+    const langButtons = document.querySelectorAll('.lang-btn');
+    console.log('Found language buttons:', langButtons.length);
+    
+    langButtons.forEach(btn => {
+        const lang = btn.getAttribute('data-lang');
+        const btnId = btn.id;
+        console.log(`Adding event listener to button: ${btnId} (${lang})`);
+        
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(`Button clicked: ${btnId}, language: ${lang}`);
             changeLanguage(lang);
         });
     });
     
-    console.log('Language event listeners added');
+    console.log('Language system initialized successfully');
 }
 
 // Mobile Navigation Toggle
