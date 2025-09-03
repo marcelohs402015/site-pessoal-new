@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Hernandes da Silva - Java Senior Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>MHS</span>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="pt">PT</button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" id="nav-home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" id="nav-about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span id="hero-greeting">Hello, I'm</span> <span class="highlight">Marcelo Hernandes da Silva</span>
+                    </h1>
+                    <h2 class="hero-subtitle" id="hero-subtitle">Java Senior Developer</h2>
+                    <p class="hero-description" id="hero-description">
+                        Professional with over 28 years of experience in the information technology market, developing systems in Java, Cloud Deploy, GCP, Bucket, Pub/Sub, Node.js
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" id="btn-projects">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary" id="btn-contact">Contact</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://github.com/marcelohs402015.png" alt="Marcelo Hernandes da Silva" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" id="about-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="about-text-1">
+                        I am a passionate Java Senior Developer with over two decades of experience in developing enterprise systems. My journey in IT has allowed me to work with the most modern technologies and architectures.
+                    </p>
+                    <p id="about-text-2">
+                        Specialized in backend development with Java, Spring Boot, Quarkus and RESTful APIs. I have solid experience in cloud computing, especially Google Cloud Platform (GCP) and Amazon Web Services (AWS), including services like Lambda, SQS, SNS and S3.
+                    </p>
+                    <p id="about-text-3">
+                        Currently based in Vancouver, CA, I continue to expand my knowledge and contribute to innovative projects that make a difference.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>28+</h3>
+                        <p id="stat-experience">Years of Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>21</h3>
+                        <p id="stat-repos">GitHub Repositories</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>7</h3>
+                        <p id="stat-projects">Featured Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" id="experience-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 id="exp-1-title">Java Senior Developer</h3>
+                        <p class="timeline-company" id="exp-1-company">Freelancer / Independent Consultant</p>
+                        <p class="timeline-period" id="exp-1-period">2020 - Present</p>
+                        <p class="timeline-description" id="exp-1-desc">
+                            Development of enterprise systems, RESTful APIs with Spring Boot and Quarkus, implementation of cloud-native solutions with GCP and AWS.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 id="exp-2-title">Java Mid/Senior Developer</h3>
+                        <p class="timeline-company" id="exp-2-company">Technology Companies</p>
+                        <p class="timeline-period" id="exp-2-period">2010 - 2020</p>
+                        <p class="timeline-description" id="exp-2-desc">
+                            Development of Java EE applications, enterprise management systems, database integration and third-party APIs.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 id="exp-3-title">Java Junior/Mid Developer</h3>
+                        <p class="timeline-company" id="exp-3-company">Startups and IT Companies</p>
+                        <p class="timeline-period" id="exp-3-period">1995 - 2010</p>
+                        <p class="timeline-description" id="exp-3-desc">
+                            Beginning of Java development career, learning frameworks and software development methodologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" id="projects-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Handyman Manager</h3>
+                        <p id="project-handyman-desc">Complete management system for service providers, with React frontend and Java backend.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://handyman-manager-frontend.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> <span id="btn-demo">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Building Concierge</h3>
+                        <p id="project-concierge-desc">Access control and concierge management system for residential buildings.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/marcelohs402015/PortariaCondominio" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span id="btn-code-1">Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Parking JPA API</h3>
+                        <p id="project-parking-desc">RESTful API for parking system with JPA and Spring Boot.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">JPA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/marcelohs402015/parking-jpa-api" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span id="btn-code-2">Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Building Security</h3>
+                        <p id="project-security-desc">Security and access control system for buildings with web interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/marcelohs402015/condominio_seguranca" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span id="btn-code-3">Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Spring Boot 3 JPA</h3>
+                        <p id="project-spring-desc">Modern API with Spring Boot 3, JPA and the latest framework features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot 3</span>
+                            <span class="tech-tag">JPA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/marcelohs402015/springboot3-jpa" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span id="btn-code-4">Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Quarkus API</h3>
+                        <p id="project-quarkus-desc">High-performance API developed with Quarkus for cloud-native applications.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Quarkus</span>
+                            <span class="tech-tag">Cloud Native</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/marcelohs402015/quarkus-api" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> <span id="btn-code-5">Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" id="skills-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 id="skill-lang">Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 id="skill-frameworks">Frameworks & Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Spring Boot</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Quarkus</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JPA/Hibernate</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 id="skill-cloud">Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Google Cloud Platform</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS (Lambda, SQS, SNS, S3)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 id="skill-tools">Tools & Methodologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Maven/Gradle</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">REST APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" id="contact-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 id="contact-subtitle">Let's Talk!</h3>
+                    <p id="contact-text">
+                        I'm always open to new opportunities and interesting collaborations. If you have a project in mind or would like to discuss possibilities, don't hesitate to get in touch.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vancouver, CA</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>www.marcelohsilva.com.br</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3 id="contact-social">Social Media</h3>
+                    <div class="social-grid">
+                        <a href="https://www.linkedin.com/in/marcelo-hernandes-351a7159/" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/marcelohs402015" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Marcelo Hernandes da Silva. <span id="footer-rights">All rights reserved.</span></p>
+                <p><span id="footer-developed">Developed with</span> ❤️ <span id="footer-code">and lots of code</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
