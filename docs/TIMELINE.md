@@ -1,5 +1,5 @@
 # ⏱️ TIMELINE - Cronologia do Desenvolvimento
-## Site Pessoal - Marcelo Hernandes da Silva
+## Personal WebSite - Marcelo Hernandes da Silva
 
 ---
 
